@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare | Panel Veterinario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-heart-pulse-fill"></i> **PetCare**
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-door-fill"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mascotas.php"><i class="bi bi-clipboard-plus-fill"></i> Mascotas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="agenda.php"><i class="bi bi-calendar-check-fill"></i> Turnos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-danger text-white ms-2" href="logout.php"><i class="bi bi-box-arrow-right"></i> Salir</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid pt-5 mt-5">
+        <h1 class="mb-4">👋 Panel Principal, Dr/a. [Nombre]</h1>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-warning text-dark">
+                        <h4 class="mb-0"><i class="bi bi-bell-fill"></i> **Alertas y Recordatorios**</h4>
+                    </div>
+                    <div class="card-body" id="alertas-proximas">
+                        <div class="alert alert-info mb-0" role="alert">
+                            No hay alertas críticas por el momento. ¡Buen trabajo!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card text-white bg-success h-100 shadow">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h3 class="card-title">**Turnos Hoy**</h3>
+                                <p class="fs-1 fw-bold" id="citas-hoy">5</p>
+                            </div>
+                            <i class="bi bi-calendar3-event display-4"></i>
+                        </div>
+                    </div>
+                    <a href="agenda.php" class="card-footer text-white text-decoration-none">
+                        Ver Agenda Completa <i class="bi bi-arrow-right-circle-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card text-white bg-primary h-100 shadow">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h3 class="card-title">**Pacientes Activos**</h3>
+                                <p class="fs-1 fw-bold" id="pacientes-activos">128</p>
+                            </div>
+                            <i class="bi bi-hospital-fill display-4"></i>
+                        </div>
+                    </div>
+                    <a href="mascotas.php" class="card-footer text-white text-decoration-none">
+                        Gestionar Mascotas <i class="bi bi-arrow-right-circle-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card text-white bg-danger h-100 shadow">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h3 class="card-title">**Vacunas Vencen (7 días)**</h3>
+                                <p class="fs-1 fw-bold" id="vacunas-proximas">12</p>
+                            </div>
+                            <i class="bi bi-shield-fill-exclamation display-4"></i>
+                        </div>
+                    </div>
+                    <a href="vacunas.php" class="card-footer text-white text-decoration-none">
+                        Revisar Vencimientos <i class="bi bi-arrow-right-circle-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <footer class="bg-light text-center text-lg-start mt-auto">
+        <div class="text-center p-3">
+            © 2025 PetCare® - Agenda Veterinaria | Pablo Almada
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script> 
+</body>
+</html>

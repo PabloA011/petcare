@@ -1,0 +1,16 @@
+body {
+    background-color: #f4f6f9; 
+    transform: none !important;
+    filter: none !important;
+    will-change: auto !important;
+    margin-top:100px;
+}
+
+.site-footer {
+    position: relative !important;
+    bottom: auto !important;
+    width: 100% !important;
+    z-index: 1;
+    margin-top: 150px;
+}
+

@@ -1,0 +1,26 @@
+body {
+    padding-top: 56px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+main {
+    flex: 1; 
+}
+
+.card-footer {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-footer:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
